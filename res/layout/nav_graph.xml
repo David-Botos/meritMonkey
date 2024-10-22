@@ -1,0 +1,38 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/timerScreen">  <!-- Like your initial route in React -->
+
+    <!-- Timer Screen -->
+    <fragment
+        android:id="@+id/timerScreen"
+        android:name=".ui.screens.timer.TimerScreen"
+        android:label="Timer">
+        <!-- Arguments (like URL parameters in React) -->
+        <argument
+            android:name="initialMinutes"
+            app:argType="integer"
+            android:defaultValue="25" />
+        
+        <!-- Define navigation actions (like route definitions) -->
+        <action
+            android:id="@+id/toSettings"
+            app:destination="@id/settingsScreen"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out" />
+    </fragment>
+
+    <!-- Settings Screen -->
+    <fragment
+        android:id="@+id/settingsScreen"
+        android:name=".ui.screens.settings.SettingsScreen"
+        android:label="Settings">
+        <!-- Back action to timer -->
+        <action
+            android:id="@+id/backToTimer"
+            app:destination="@id/timerScreen"
+            app:popUpTo="@id/timerScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation> -->
